@@ -1,3 +1,13 @@
+.header-content {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px dashed @navigation-border;
+
+  @media @mobile {
+    padding-bottom: 2%;
+  }
+}
+
 .home {
 
   .content-section {
@@ -27,10 +37,15 @@
         width: 100%;
         padding-left: 0;
         display: flex;
+        flex-direction: column;
         justify-content: center;
 
         img {
           width: 100%;
+
+          @media @mobile {
+            align-items: center;
+          }
         }
       }
 
@@ -91,6 +106,7 @@
   .content-pick {
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
+    border-bottom: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
 
@@ -101,21 +117,16 @@
 
     .destination {
       width: 30%;
-      margin-bottom: 30px;
+      margin-bottom: 30px;      
+      
 
       @media @mobile {
-        width: 85%;
-      }
-
-      button {
-        background-color: @button-bg;
-        width: 200px;
-        height: 45px;
-        border-radius: 1.2rem;
-        font-size: 1.7rem;
-        font-weight: bold;
-        color: @white;
+        width: 90%;        
       }
     }
   }
 }// home
+
+.btn {
+  .button(5vh, 100%);
+}
